@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kai Karube</title>
+<meta name="description" content="Kai Karube — Computer Engineering student at Columbia University. World models, spatial computing, AR.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #666;
+    --line: #e5e5e5;
+    --accent: #0f4c81;
+    --card: #fafafa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111214;
+      --fg: #e8e8e8;
+      --muted: #9a9a9a;
+      --line: #2a2c2f;
+      --accent: #7ab3e0;
+      --card: #1a1c1f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 4.5rem 1.4rem 3rem; }
+  h1 { font-size: 2rem; margin: 0 0 .3rem; letter-spacing: -.02em; }
+  .tagline { color: var(--muted); margin: 0 0 .2rem; }
+  .route { color: var(--muted); font-size: .9rem; margin: 0 0 2.2rem; }
+  h2 {
+    font-size: .85rem; text-transform: uppercase; letter-spacing: .12em;
+    color: var(--muted); margin: 2.6rem 0 1rem; font-weight: 600;
+  }
+  p { margin: 0 0 1rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.25rem; margin-bottom: .9rem;
+  }
+  .card h3 { margin: 0 0 .35rem; font-size: 1.02rem; }
+  .card p { margin: 0; font-size: .95rem; color: var(--fg); }
+  .card .meta { color: var(--muted); font-size: .85rem; margin-top: .5rem; display: block; }
+  ul { padding-left: 1.2rem; margin: 0 0 1rem; }
+  li { margin-bottom: .45rem; }
+  .links { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  footer {
+    color: var(--muted); font-size: .85rem;
+    border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1.2rem;
+  }
+  strong { font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Kai Karube</h1>
+  <p class="tagline">Computer Engineering @ Columbia University ('29) · Yanai Tadashi Foundation Scholar</p>
+  <p class="route">Kobe → Hamburg → London → Milan → New York</p>
+
+  <p>I've spent the last three years getting reality into computers by hand —
+  photogrammetry of a centuries-old Kyoto temple, AR interfaces for lunar
+  vehicles, Gaussian-splat capture experiments. The question I keep coming back
+  to: <strong>when do learned world models replace hand-built reconstruction —
+  and what does reconstruction still know that generation doesn't?</strong>
+  That thread — capture → reconstruction → learned simulation — connects
+  everything below.</p>
+
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>NASA SUITS — AR interface for the Lunar Terrain Vehicle</h3>
+    <p>AR UI/UX on Columbia Space Initiative's LTV team (NASA Johnson Space
+    Center student challenge). I designed the state color-coding system
+    astronauts read at a glance under lunar constraints — offline, gloved
+    hands, narrow field of view — and built an error-code → actionable-instruction
+    translation feature, integrated into the team's shared Unity architecture.</p>
+    <span class="meta"><a href="https://github.com/Kaitechcode/SUITS-MagicLeap-26">Team repo</a> · Unity · 2026</span>
+  </div>
+
+  <div class="card">
+    <h3>Recruit × Carsensor — new-business plan &amp; prototype</h3>
+    <p>Summer 2026 product-management internship at Recruit (Tokyo) on
+    Carsensor, Japan's largest used-car marketplace. Business model aimed at
+    cutting the used-car selling journey from ~30 days to same-day, with a
+    working prototype combining 3D vehicle scanning, AI exterior-damage
+    detection, and smartphone sensor data. <strong>Grand prize</strong> at the
+    final presentation to Carsensor's Vice Presidents.</p>
+    <span class="meta">Product management · prototyping · Jun–Aug 2026</span>
+  </div>
+
+  <div class="card">
+    <h3>Kyoto Taizō-in — XR reconstruction</h3>
+    <p>Photogrammetry-based 3D reconstruction of Taizō-in, a 600-year-old
+    Zen temple in Kyoto, brought into VR — digital preservation so the temple
+    can outlive its wood. The project that started the world-models thread.</p>
+    <span class="meta">Photogrammetry · Blender · Unity · 2023–25</span>
+  </div>
+
+  <h2>Now</h2>
+  <ul>
+    <li>Building foundations in public: daily data structures &amp; algorithms
+    (<a href="https://github.com/Kaitechcode/neetcode-submissions">neetcode-submissions</a>),
+    C++ systems programming, Karpathy's <em>Zero to Hero</em> (micrograd → GPT)</li>
+    <li>Exploring learned world models and where reconstruction still wins:
+    metric accuracy, semantics you can trust</li>
+    <li>Columbia: sophomore year, 18.5 credits, Dean's List both semesters so far</li>
+  </ul>
+
+  <h2>Find me</h2>
+  <p class="links">
+    <a href="https://github.com/Kaitechcode">GitHub</a>
+    <a href="https://www.linkedin.com/in/kaikarube">LinkedIn</a>
+  </p>
+
+  <footer>© 2026 Kai Karube</footer>
+</main>
+</body>
+</html>
