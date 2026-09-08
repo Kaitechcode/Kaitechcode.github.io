@@ -62,7 +62,7 @@
   .when { color: var(--muted); font-size: .88rem; white-space: nowrap; }
   .org { color: var(--muted); font-size: .93rem; margin: .1rem 0 .2rem; }
   .entry ul { margin: .45rem 0 0; padding-left: 1.15rem; }
-  .entry li { margin: .3rem 0; font-size: .96rem; }
+  .entry li { margin: .35rem 0; font-size: .96rem; }
   .entry li::marker { color: var(--muted); }
 
   /* Awards */
@@ -73,7 +73,7 @@
   }
   .awards li:last-child { border-bottom: none; }
   .awards .what { max-width: 78%; }
-  .awards .note { color: var(--muted); }
+  .awards .note { color: var(--muted); white-space: nowrap; }
 
   /* Skills */
   .skillrow { margin: .8rem 0; font-size: .96rem; }
@@ -130,26 +130,16 @@
 
   <div class="entry">
     <div class="entry-head">
-      <h3>Columbia University — Fu Foundation School of Engineering</h3>
+      <h3>Columbia University — Fu Foundation School of Engineering and Applied Science</h3>
       <span class="when">2025 — May 2029 (expected)</span>
     </div>
     <p class="org">B.S. in Computer Engineering · New York, NY</p>
     <ul>
-      <li><strong>GPA 3.81</strong> · <strong>Dean's List, every semester</strong></li>
-      <li><strong>Yanai Tadashi Foundation Scholar</strong> — full four-year merit scholarship ($105,000/year)</li>
-      <li>Columbia Space Initiative (NASA SUITS) · competitive programming</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="entry-head">
-      <h3>St. Louis School, Milan</h3>
-      <span class="when">2017 — 2025</span>
-    </div>
-    <ul>
-      <li>Student Council Chairman — six years on council, the longest tenure in school history</li>
-      <li>Founded the school's first competitive STEM club, launching its first science-olympiad entries</li>
-      <li>Selective VR research scholar, N Kou Research Program (KADOKAWA · DWANGO), 2023–25</li>
+      <li><strong>GPA 3.81/4.00</strong> · <strong>Dean's List</strong> in two consecutive semesters ·
+      top score in undergraduate calculus</li>
+      <li><strong>Yanai Tadashi Foundation Scholar</strong> — fully funded four-year merit
+      scholarship valued at approximately $420,000</li>
+      <li>Columbia Space Initiative · competitive programming</li>
     </ul>
   </div>
 
@@ -160,32 +150,43 @@
       <h3>Product Management Intern — Carsensor</h3>
       <span class="when">Jun — Aug 2026</span>
     </div>
-    <p class="org">Recruit Co., Ltd. (Recruit Holdings) · Tokyo, Japan</p>
+    <p class="org">Recruit Co., Ltd. (Recruit Holdings) · Tokyo — selected through a competitive
+    program for students at overseas universities; relocation from New York fully funded</p>
     <ul>
-      <li>Selected for a company-sponsored relocation from New York to Tokyo to
-      develop a new business model for Carsensor, Japan's largest used-car platform</li>
-      <li>Designed a business model aimed at reducing the used-car selling
-      journey from ~30 days to same-day completion</li>
-      <li>Built a functional prototype combining 3D vehicle scanning, AI
-      exterior-damage detection, and smartphone accelerometer + GPS data to
-      infer vehicle condition without specialized hardware</li>
-      <li><span class="prize">Grand Prize</span> at the final executive
-      presentation to Recruit's Vice Presidents</li>
+      <li>Developed a new business for Japan's largest used-car platform in a
+      three-person team — from initial problem discovery through executive
+      proposal and functional prototype</li>
+      <li>Starting from Carsensor's vision, <em>"More Happy Cars,"</em> defined the
+      core proposition — every vehicle passing seamlessly to the person for whom
+      it is most valuable — and turned it into a concrete objective: reducing the
+      ~30-day used-car selling journey to <strong>"zero days"</strong> through
+      same-day appraisal and sale</li>
+      <li>Designed the target customer, problem hypothesis, revenue model, KPIs,
+      and implementation roadmap</li>
+      <li>Personally built a functional prototype combining 3D vehicle scanning,
+      AI exterior-damage detection, and smartphone accelerometer + GPS data to
+      estimate vehicle condition without specialized hardware</li>
+      <li><span class="prize">Placed first overall — Grand Prize</span> at the
+      final presentation to Carsensor's business leaders and Vice Presidents</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-head">
-      <h3>AR UI/UX — NASA SUITS Challenge, Lunar Terrain Vehicle Team</h3>
+      <h3>UI/UX Lead — NASA SUITS Challenge, Lunar Terrain Vehicle Team</h3>
       <span class="when">Jan 2026 — present</span>
     </div>
     <p class="org">Columbia Space Initiative · NASA Johnson Space Center student challenge (Artemis program)</p>
     <ul>
-      <li>Designed the state color-coding system astronauts use to read vehicle
-      status at a glance under lunar constraints — offline, gloved hands, narrow
-      field of view</li>
-      <li>Built an error-code → actionable-instruction translation feature and
-      integrated it into the team's shared Unity architecture</li>
+      <li>Framed the core question — <em>what information enables an astronaut to
+      make the correct decision within seconds?</em> — and established minimizing
+      cognitive load as the team's central design principle</li>
+      <li>Designed the visual system that communicates vehicle status and urgency
+      at a glance, and translated raw machine error codes into actionable guidance</li>
+      <li>Coordinated specifications with the navigation and AI teams, integrated
+      the interface into a shared Unity environment, and refined it through
+      mentorship from NASA engineers; the team's work was presented at Johnson
+      Space Center</li>
     </ul>
   </div>
 
@@ -193,14 +194,20 @@
 
   <div class="entry">
     <div class="entry-head">
-      <h3>Taizō-in XR — digital preservation of a 600-year-old Zen temple</h3>
+      <h3>The Kyoto Project — Taizō-in XR</h3>
       <span class="when">2023 — 25</span>
     </div>
     <ul>
-      <li>Photogrammetry-based 3D reconstruction of Taizō-in temple (Kyoto),
-      brought into VR — so the temple can outlive its wood</li>
-      <li>The project that started the world-models thread: three years of
-      getting reality into computers by hand</li>
+      <li>Inspired by XR artists preserving cultural heritage threatened by war,
+      set out to preserve Japanese cultural spaces through immersive 3D experiences</li>
+      <li>Contacted the deputy priest of Taizō-in — a 600-year-old Zen temple in
+      Kyoto I had never visited — built the relationship through online meetings,
+      and secured digital references and architectural information to reconstruct
+      the temple and garden remotely</li>
+      <li>Selected for a competitive high-school research program on the strength
+      of the project (specialist mentorship + research funding); later traveled to
+      Kyoto, refined the reconstruction with 3D scanning, and presented the
+      completed experience to the deputy priest</li>
     </ul>
   </div>
 
@@ -218,14 +225,14 @@
 
   <h2>Honors &amp; Awards</h2>
   <ul class="awards">
-    <li><span class="what"><strong>Yanai Tadashi Foundation Scholarship</strong> — full merit award, $105,000/year × 4 years</span><span class="note">2025</span></li>
-    <li><span class="what"><strong>Grand Prize</strong> — Recruit PdM internship, final VP presentation</span><span class="note">2026</span></li>
+    <li><span class="what"><strong>Yanai Tadashi Foundation Scholarship</strong> — fully funded four-year merit award (~$420,000)</span><span class="note">2025</span></li>
+    <li><span class="what"><strong>Grand Prize</strong> — first overall, Recruit Carsensor internship, final VP presentation</span><span class="note">2026</span></li>
     <li><span class="what"><strong>Y Combinator Startup School</strong> — hand-selected participant, San Francisco</span><span class="note">2026</span></li>
-    <li><span class="what"><strong>Reply Teen Coding Challenge</strong> — 36th worldwide, top 5% (team)</span><span class="note">High school</span></li>
-    <li><span class="what"><strong>Italian Olympiad in Informatics</strong> — Silver Medal (team competition)</span><span class="note">High school</span></li>
+    <li><span class="what"><strong>Italian Team Olympiad in Informatics</strong> — Silver Medal</span><span class="note">High school</span></li>
+    <li><span class="what"><strong>Reply Teen Coding Challenge</strong> — 36th worldwide (top 5%)</span><span class="note">High school</span></li>
     <li><span class="what"><strong>Molecon CTF</strong> — 32nd of 1,030 teams</span><span class="note">High school</span></li>
     <li><span class="what"><strong>GYEC</strong> — International Finalist, representing Italy (team lead)</span><span class="note">High school</span></li>
-    <li><span class="what"><strong>Wings of Mathematics (数理の翼)</strong> — selected scholar; seminar with Fields Medalist Shigefumi Mori</span><span class="note">Japan</span></li>
+    <li><span class="what"><strong>Italian Mathematics Olympiad</strong> — advanced beyond the first round</span><span class="note">High school</span></li>
   </ul>
 
   <h2>Skills</h2>
@@ -233,7 +240,7 @@
     <div class="chips"><span class="chip">Python</span><span class="chip">Java</span><span class="chip">C++</span></div>
   </div>
   <div class="skillrow"><span class="label">Graphics &amp; XR</span>
-    <div class="chips"><span class="chip">Unity</span><span class="chip">Blender</span><span class="chip">Unreal Engine 5</span><span class="chip">Photogrammetry</span></div>
+    <div class="chips"><span class="chip">Unity</span><span class="chip">Blender</span><span class="chip">Unreal Engine</span><span class="chip">Photogrammetry</span></div>
   </div>
   <div class="skillrow"><span class="label">Product</span>
     <div class="chips"><span class="chip">Business modeling</span><span class="chip">Prototyping</span><span class="chip">KPI design</span></div>
