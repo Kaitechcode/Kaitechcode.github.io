@@ -4,125 +4,248 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kai Karube</title>
-<meta name="description" content="Kai Karube — Computer Engineering student at Columbia University. World models, spatial computing, AR.">
+<meta name="description" content="Kai Karube — Computer Engineering at Columbia University. World models, spatial computing, product. Yanai Tadashi Foundation Scholar.">
+<meta property="og:title" content="Kai Karube">
+<meta property="og:description" content="Computer Engineering @ Columbia '29 · World models & spatial technology · Yanai Tadashi Foundation Scholar">
 <style>
   :root {
     --bg: #ffffff;
-    --fg: #1a1a1a;
-    --muted: #666;
-    --line: #e5e5e5;
+    --fg: #1c1d1f;
+    --muted: #6b6f76;
+    --line: #e6e7e9;
     --accent: #0f4c81;
-    --card: #fafafa;
+    --chip: #f3f4f6;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #111214;
-      --fg: #e8e8e8;
-      --muted: #9a9a9a;
-      --line: #2a2c2f;
-      --accent: #7ab3e0;
-      --card: #1a1c1f;
+      --bg: #101113;
+      --fg: #e9e9ea;
+      --muted: #9a9ea6;
+      --line: #26282c;
+      --accent: #82b5e2;
+      --chip: #1b1d21;
     }
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--fg);
+    margin: 0; background: var(--bg); color: var(--fg);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
   }
-  main { max-width: 680px; margin: 0 auto; padding: 4.5rem 1.4rem 3rem; }
-  h1 { font-size: 2rem; margin: 0 0 .3rem; letter-spacing: -.02em; }
-  .tagline { color: var(--muted); margin: 0 0 .2rem; }
-  .route { color: var(--muted); font-size: .9rem; margin: 0 0 2.2rem; }
-  h2 {
-    font-size: .85rem; text-transform: uppercase; letter-spacing: .12em;
-    color: var(--muted); margin: 2.6rem 0 1rem; font-weight: 600;
+  main { max-width: 780px; margin: 0 auto; padding: 4rem 1.5rem 2.5rem; }
+
+  /* Header */
+  header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.6rem; margin: 0 0 .4rem; letter-spacing: -.015em; font-weight: 600;
   }
-  p { margin: 0 0 1rem; }
+  .tagline { font-size: 1.05rem; margin: 0 0 .35rem; }
+  .subline { color: var(--muted); font-size: .92rem; margin: 0 0 1.1rem; }
+  .contact { display: flex; gap: 1.3rem; flex-wrap: wrap; font-size: .95rem; margin-bottom: .4rem; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  .card {
-    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
-    padding: 1.1rem 1.25rem; margin-bottom: .9rem;
+
+  /* Sections */
+  h2 {
+    font-size: .8rem; text-transform: uppercase; letter-spacing: .14em;
+    color: var(--muted); font-weight: 650;
+    margin: 2.8rem 0 .4rem; padding-bottom: .45rem;
+    border-bottom: 1px solid var(--line);
   }
-  .card h3 { margin: 0 0 .35rem; font-size: 1.02rem; }
-  .card p { margin: 0; font-size: .95rem; color: var(--fg); }
-  .card .meta { color: var(--muted); font-size: .85rem; margin-top: .5rem; display: block; }
-  ul { padding-left: 1.2rem; margin: 0 0 1rem; }
-  li { margin-bottom: .45rem; }
-  .links { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  p { margin: .9rem 0; }
+
+  /* Entries */
+  .entry { margin: 1.35rem 0 0; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+  .entry-head h3 { margin: 0; font-size: 1.06rem; font-weight: 650; }
+  .when { color: var(--muted); font-size: .88rem; white-space: nowrap; }
+  .org { color: var(--muted); font-size: .93rem; margin: .1rem 0 .2rem; }
+  .entry ul { margin: .45rem 0 0; padding-left: 1.15rem; }
+  .entry li { margin: .3rem 0; font-size: .96rem; }
+  .entry li::marker { color: var(--muted); }
+
+  /* Awards */
+  .awards { list-style: none; padding: 0; margin: .4rem 0 0; }
+  .awards li {
+    display: flex; justify-content: space-between; gap: 1rem;
+    padding: .55rem 0; border-bottom: 1px solid var(--line); font-size: .96rem;
+  }
+  .awards li:last-child { border-bottom: none; }
+  .awards .what { max-width: 78%; }
+  .awards .note { color: var(--muted); }
+
+  /* Skills */
+  .skillrow { margin: .8rem 0; font-size: .96rem; }
+  .skillrow .label { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; display: block; margin-bottom: .15rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .3rem; }
+  .chip {
+    background: var(--chip); border: 1px solid var(--line); border-radius: 999px;
+    padding: .18rem .7rem; font-size: .87rem;
+  }
+
   footer {
-    color: var(--muted); font-size: .85rem;
-    border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1.2rem;
+    color: var(--muted); font-size: .84rem;
+    border-top: 1px solid var(--line); margin-top: 3.2rem; padding-top: 1.1rem;
+    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
   }
-  strong { font-weight: 600; }
+  strong { font-weight: 650; }
+  .prize { color: var(--accent); font-weight: 650; }
+
+  @media print {
+    :root { --bg: #fff; --fg: #000; --muted: #444; --line: #ccc; --accent: #000; --chip: #f2f2f2; }
+    main { padding: 0; max-width: 100%; }
+    a { color: #000; }
+    footer { display: none; }
+  }
 </style>
 </head>
 <body>
 <main>
-  <h1>Kai Karube</h1>
-  <p class="tagline">Computer Engineering @ Columbia University ('29) · Yanai Tadashi Foundation Scholar</p>
-  <p class="route">Kobe → Hamburg → London → Milan → New York</p>
+  <header>
+    <h1>Kai Karube</h1>
+    <p class="tagline">Computer Engineering @ Columbia University ('29) · World models &amp; spatial technology</p>
+    <p class="subline">Kobe → Hamburg → London → Milan → New York</p>
+    <nav class="contact">
+      <a href="https://github.com/Kaitechcode">GitHub</a>
+      <a href="https://www.linkedin.com/in/kaikarube">LinkedIn</a>
+      <span style="color:var(--muted)">New York, NY</span>
+    </nav>
+  </header>
 
-  <p>I've spent the last three years getting reality into computers by hand —
-  photogrammetry of a centuries-old Kyoto temple, AR interfaces for lunar
-  vehicles, Gaussian-splat capture experiments. The question I keep coming back
-  to: <strong>when do learned world models replace hand-built reconstruction —
-  and what does reconstruction still know that generation doesn't?</strong>
-  That thread — capture → reconstruction → learned simulation — connects
-  everything below.</p>
+  <h2>About</h2>
+  <p>Since high school, I've loved working in 3D computer graphics. An empty
+  scene could become anything I imagined — a place, an object, an entirely new
+  world. That freedom to build something from nothing is what got me hooked.
+  I love how art and computing come together to create something that makes
+  people stop and look.</p>
+  <p>Now, that fascination is drawing me toward world models. I want to help
+  create virtual worlds that don't just look convincing, but respond, evolve,
+  and feel alive.</p>
+  <p>I'm happiest when I'm making things: a useful tool, an interactive
+  experience, or an experiment I can't stop thinking about. I want to keep
+  turning those ideas into things people can actually experience.</p>
+
+  <h2>Education</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Columbia University — Fu Foundation School of Engineering</h3>
+      <span class="when">2025 — May 2029 (expected)</span>
+    </div>
+    <p class="org">B.S. in Computer Engineering · New York, NY</p>
+    <ul>
+      <li><strong>GPA 3.81</strong> · <strong>Dean's List, every semester</strong></li>
+      <li><strong>Yanai Tadashi Foundation Scholar</strong> — full four-year merit scholarship ($105,000/year)</li>
+      <li>Columbia Space Initiative (NASA SUITS) · competitive programming</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>St. Louis School, Milan</h3>
+      <span class="when">— 2025</span>
+    </div>
+    <ul>
+      <li>Student Council Chairman — six years on council, the longest tenure in school history</li>
+      <li>Founded the school's first competitive STEM club, launching its first science-olympiad entries</li>
+      <li>Selective VR research scholar, N Kou Research Program (KADOKAWA · DWANGO), 2023–25</li>
+    </ul>
+  </div>
+
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Product Management Intern — Carsensor</h3>
+      <span class="when">Jun — Aug 2026</span>
+    </div>
+    <p class="org">Recruit Co., Ltd. (Recruit Holdings) · Tokyo, Japan</p>
+    <ul>
+      <li>Selected for a company-sponsored relocation from New York to Tokyo to
+      develop a new business model for Carsensor, Japan's largest used-car platform</li>
+      <li>Designed a business model aimed at reducing the used-car selling
+      journey from ~30 days to same-day completion</li>
+      <li>Built a functional prototype combining 3D vehicle scanning, AI
+      exterior-damage detection, and smartphone accelerometer + GPS data to
+      infer vehicle condition without specialized hardware</li>
+      <li><span class="prize">Grand Prize</span> at the final executive
+      presentation to Recruit's Vice Presidents</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>AR UI/UX — NASA SUITS Challenge, Lunar Terrain Vehicle Team</h3>
+      <span class="when">Jan 2026 — present</span>
+    </div>
+    <p class="org">Columbia Space Initiative · NASA Johnson Space Center student challenge (Artemis program)</p>
+    <ul>
+      <li>Designed the state color-coding system astronauts use to read vehicle
+      status at a glance under lunar constraints — offline, gloved hands, narrow
+      field of view</li>
+      <li>Built an error-code → actionable-instruction translation feature and
+      integrated it into the team's shared Unity architecture</li>
+    </ul>
+  </div>
 
   <h2>Projects</h2>
 
-  <div class="card">
-    <h3>NASA SUITS — AR interface for the Lunar Terrain Vehicle</h3>
-    <p>AR UI/UX on Columbia Space Initiative's LTV team (NASA Johnson Space
-    Center student challenge). I designed the state color-coding system
-    astronauts read at a glance under lunar constraints — offline, gloved
-    hands, narrow field of view — and built an error-code → actionable-instruction
-    translation feature, integrated into the team's shared Unity architecture.</p>
-    <span class="meta"><a href="https://github.com/Kaitechcode/SUITS-MagicLeap-26">Team repo</a> · Unity · 2026</span>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Taizō-in XR — digital preservation of a 600-year-old Zen temple</h3>
+      <span class="when">2023 — 25</span>
+    </div>
+    <ul>
+      <li>Photogrammetry-based 3D reconstruction of Taizō-in temple (Kyoto),
+      brought into VR — so the temple can outlive its wood</li>
+      <li>The project that started the world-models thread: three years of
+      getting reality into computers by hand</li>
+    </ul>
   </div>
 
-  <div class="card">
-    <h3>Recruit × Carsensor — new-business plan &amp; prototype</h3>
-    <p>Summer 2026 product-management internship at Recruit (Tokyo) on
-    Carsensor, Japan's largest used-car marketplace. Business model aimed at
-    cutting the used-car selling journey from ~30 days to same-day, with a
-    working prototype combining 3D vehicle scanning, AI exterior-damage
-    detection, and smartphone sensor data. <strong>Grand prize</strong> at the
-    final presentation to Carsensor's Vice Presidents.</p>
-    <span class="meta">Product management · prototyping · Jun–Aug 2026</span>
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Foundations, built in public</h3>
+      <span class="when">2026 — </span>
+    </div>
+    <ul>
+      <li>Daily data structures &amp; algorithms
+      (<a href="https://github.com/Kaitechcode/neetcode-submissions">neetcode-submissions</a>),
+      C++ systems programming, Karpathy's <em>Zero to Hero</em> (micrograd → GPT)</li>
+    </ul>
   </div>
 
-  <div class="card">
-    <h3>Kyoto Taizō-in — XR reconstruction</h3>
-    <p>Photogrammetry-based 3D reconstruction of Taizō-in, a 600-year-old
-    Zen temple in Kyoto, brought into VR — digital preservation so the temple
-    can outlive its wood. The project that started the world-models thread.</p>
-    <span class="meta">Photogrammetry · Blender · Unity · 2023–25</span>
-  </div>
-
-  <h2>Now</h2>
-  <ul>
-    <li>Building foundations in public: daily data structures &amp; algorithms
-    (<a href="https://github.com/Kaitechcode/neetcode-submissions">neetcode-submissions</a>),
-    C++ systems programming, Karpathy's <em>Zero to Hero</em> (micrograd → GPT)</li>
-    <li>Exploring learned world models and where reconstruction still wins:
-    metric accuracy, semantics you can trust</li>
-    <li>Columbia: sophomore year, 18.5 credits, Dean's List both semesters so far</li>
+  <h2>Honors &amp; Awards</h2>
+  <ul class="awards">
+    <li><span class="what"><strong>Yanai Tadashi Foundation Scholarship</strong> — full merit award, $105,000/year × 4 years</span><span class="note">2025</span></li>
+    <li><span class="what"><strong>Grand Prize</strong> — Recruit PdM internship, final VP presentation</span><span class="note">2026</span></li>
+    <li><span class="what"><strong>Y Combinator Startup School</strong> — hand-selected participant, San Francisco</span><span class="note">2026</span></li>
+    <li><span class="what"><strong>Reply Teen Coding Challenge</strong> — 36th worldwide, top 5% (team)</span><span class="note">Milan era</span></li>
+    <li><span class="what"><strong>Italian Olympiad in Informatics</strong> — Silver Medal (team competition)</span><span class="note">Milan era</span></li>
+    <li><span class="what"><strong>Molecon CTF</strong> — 32nd of 1,030 teams</span><span class="note">Milan era</span></li>
+    <li><span class="what"><strong>GYEC</strong> — International Finalist, representing Italy (team lead)</span><span class="note">Milan era</span></li>
+    <li><span class="what"><strong>Wings of Mathematics (数理の翼)</strong> — selected scholar; seminar with Fields Medalist Shigefumi Mori</span><span class="note">Japan</span></li>
   </ul>
 
-  <h2>Find me</h2>
-  <p class="links">
-    <a href="https://github.com/Kaitechcode">GitHub</a>
-    <a href="https://www.linkedin.com/in/kaikarube">LinkedIn</a>
-  </p>
+  <h2>Skills</h2>
+  <div class="skillrow"><span class="label">Programming</span>
+    <div class="chips"><span class="chip">Python</span><span class="chip">Java</span><span class="chip">C++</span></div>
+  </div>
+  <div class="skillrow"><span class="label">Graphics &amp; XR</span>
+    <div class="chips"><span class="chip">Unity</span><span class="chip">Blender</span><span class="chip">Unreal Engine 5</span><span class="chip">Photogrammetry</span></div>
+  </div>
+  <div class="skillrow"><span class="label">Product</span>
+    <div class="chips"><span class="chip">Business modeling</span><span class="chip">Prototyping</span><span class="chip">KPI design</span></div>
+  </div>
+  <div class="skillrow"><span class="label">Languages</span>
+    <div class="chips"><span class="chip">Japanese — native</span><span class="chip">English — fluent</span><span class="chip">Italian — intermediate</span></div>
+  </div>
 
-  <footer>© 2026 Kai Karube</footer>
+  <footer>
+    <span>© 2026 Kai Karube</span>
+    <span>Last updated September 2026 · hand-built, no framework</span>
+  </footer>
 </main>
 </body>
 </html>
